@@ -1,0 +1,5 @@
+#默认使用配置
+spring:
+  mvc:
+    view:
+      suffix: .html
