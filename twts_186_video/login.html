@@ -117,9 +117,13 @@
                 </div>
                 <div class="hero__outer">
                     <div class="hero__inner hero__inner--bottom" >
-                        <form id="login" action="" method="get" style="background: rgba(215,215,215,0.7); padding: 20px;">
+                        <form id="login" action="" method="get" style="background: rgba(215,215,215,0.7); padding: 20px; border-radius: 10px">
                             <input id="email" type="text" name="email" placeholder="邮箱">
                             <input type="password" name="password" placeholder="密码">
+                            <ul class="nav__menu nav__menu--inline">
+                                <li><a href="sign_up.html">注册</a></li>
+                                <li><a href="">忘记密码找回</a></li>
+                            </ul> <!-- end menu -->
                             <input type="button" value="登录" class="btn btn--md btn--light btn--wide"style="background-color: #0b5453" onclick="login()">
                         </form>
                         <script type="text/javascript">

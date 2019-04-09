@@ -78,12 +78,12 @@
                             <li><a href="news_post.html">新闻公告</a></li>
                             <li><a href="download_resource.html">资料下载</a></li>
                             <li><a href="contact_us.html">联系我们</a></li>
-                            <li><a href="team_info.html"  onclick="return isLogin()"><span>我的信息</span></a>
+                            <li><a href="team_info.html" onclick="return isLogin()"><span>我的信息</span></a>
                                 <script type="text/javascript">
-                                    function isLogin(){
-                                        if(localStorage.getItem("email")!=""){
+                                    function isLogin() {
+                                        if (localStorage.getItem("email") != "") {
                                             return true;
-                                        }else{
+                                        } else {
                                             alert("请先登录");
                                             return false;
                                         }
@@ -109,102 +109,107 @@
 
     <div class="content-wrapper oh">
         <!-- Promo Section -->
-        <section class="section-wrap promo-section" id="infoList">
+        <section class="section-wrap promo-section">
             <div class="container">
                 <div class="heading-row text-center">
                     <h3 class="heading">团队信息</h3>
                 </div>
             </div>
 
+            <div id="memberList">
+                <div class="container" style="border-top: 1px solid #e8e8e8;">
+                    <div class="row">
+                        <div class="col-md-11 col-md-offset-1 col-sm-12 animate">
+                            <div class="promo-section__description">
+                                <h5 class="promo-section__title">
+                                    <button style="width:30px; height: 30px; border-radius: 15px" id="addMember">+</button>
+                                    团队成员（团队负责人）信息
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="col-md-11 col-md-offset-1">
+                            <table style="border-collapse:separate; border-spacing:10px 10px;">
+                                <tr>
+                                    <td><input type="text" name="name" placeholder="姓名"/></td>
+                                    <td><input type="text" name="gender" placeholder="性别"></td>
+                                    <td><input type="text" name="id" placeholder="身份证号"/></td>
+                                    <td><input type="text" name="phone" placeholder="联系电话"/></td>
+                                    <td><input type="text" name="email" placeholder="邮箱"/></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="college" placeholder="学校"/></td>
+                                    <td><input type="text" name="major" placeholder="院系专业"></td>
+                                    <td><input type="text" name="grade" placeholder="年级"/></td>
+                                    <td><input type="text" name="schoolId" placeholder="学号"/></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="container" style="border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;">
+                    <div class="row">
+                        <div class="col-md-11 col-md-offset-1 col-sm-12 animate">
+                            <div class="promo-section__description">
+                                <h5 class="promo-section__title"><button style="width:30px; height:30px;border-radius: 15px" id="deleteMember">—</button>团队成员信息</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="col-md-11 col-md-offset-1">
+                            <table style="border-collapse:separate; border-spacing:10px 10px;">
+                                <tr>
+                                    <td><input type="text" name="name" placeholder="姓名"/></td>
+                                    <td><input type="text" name="gender" placeholder="性别"></td>
+                                    <td><input type="text" name="id" placeholder="身份证号"/></td>
+                                    <td><input type="text" name="phone" placeholder="联系电话"/></td>
+                                    <td><input type="text" name="email" placeholder="邮箱"/></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="college" placeholder="学校"/></td>
+                                    <td><input type="text" name="major" placeholder="院系专业"></td>
+                                    <td><input type="text" name="grade" placeholder="年级"/></td>
+                                    <td><input type="text" name="schoolId" placeholder="学号"/></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="teacherContainer" class="container"
+                 style="border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;">
+                <div class="row">
+                    <div class="col-md-11 col-md-offset-1 col-sm-12 animate">
+                        <div class="promo-section__description">
+                            <h5 class="promo-section__title">
+                                <button style="width:30px; height:30px;border-radius: 15px" id="addTeacher">+</button>
+                                <button style="width:30px; height:30px;border-radius: 15px" id="deleteTeacher">—</button>
+                                指导老师
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="col-md-11 col-md-offset-1">
+                        <table style="border-collapse:separate; border-spacing:10px 10px;">
+                            <tr>
+                                <td><input type="text" name="name" placeholder="姓名"/></td>
+                                <td><input type="text" name="email" placeholder="邮箱"/></td>
+                                <td><input type="text" name="company" placeholder="单位"/></td>
+                                <td><input type="text" name="researchDirection" placeholder="研究方向"/></td>
+                                <td><input type="text" name="title" placeholder="职称"/></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
             <div class="container" style="border-top: 1px solid #e8e8e8;">
                 <div class="row">
-                    <div class="col-md-3 col-md-offset-2 col-sm-12 animate">
-                        <input id="addTeacher" type="button" value="增加指导老师" class="btn btn--md btn--light btn--wide"
-                               style="margin: 5px; background-color: #0b5453">
-                    </div>
-                    <div class="col-md-3 col-sm-12 animate">
-                        <input id="addMember" type="button" value="增加成员" class="btn btn--md btn--light btn--wide"
-                               style="margin: 5px; background-color: #0b5453">
-                    </div>
-                    <div class="col-md-3 col-sm-12 animate">
+                    <div class="col-md-2 col-md-offset-5 col-sm-12 animate">
                         <input id="saveInfo" type="button" value="保存修改" class="btn btn--md btn--light btn--wide"
                                style="margin: 5px; background-color: #0b5453">
                     </div>
-                </div>
-            </div>
-            <div id="teacherContainer" class="container" style="border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;">
-                <div class="row">
-                    <div class="col-md-11 col-md-offset-1 col-sm-12 animate">
-                        <div class="promo-section__description">
-                            <h5 class="promo-section__title">指导老师</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <form class="col-md-11 col-md-offset-1">
-                        <table style="border-collapse:separate; border-spacing:10px 10px;">
-                            <tr>
-                                <td><input type="text" name="name" placeholder="姓名"/></td>
-                                <td><input type="text" name="email" placeholder="邮箱"/></td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </div>
-            <div class="container" style="border-top: 1px solid #e8e8e8;">
-                <div class="row">
-                    <div class="col-md-11 col-md-offset-1 col-sm-12 animate">
-                        <div class="promo-section__description">
-                            <h5 class="promo-section__title">团队成员（团队负责人）信息</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <form class="col-md-11 col-md-offset-1">
-                        <table style="border-collapse:separate; border-spacing:10px 10px;">
-                            <tr>
-                                <td><input type="text" name="name" placeholder="姓名"/></td>
-                                <td><input type="text" name="gender" placeholder="性别"></td>
-                                <td><input type="text" name="id" placeholder="身份证号"/></td>
-                                <td><input type="text" name="phone" placeholder="联系电话"/></td>
-                                <td><input type="text" name="email" placeholder="邮箱"/></td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="college" placeholder="学校"/></td>
-                                <td><input type="text" name="major" placeholder="院系专业"></td>
-                                <td><input type="text" name="grade" placeholder="年级"/></td>
-                                <td><input type="text" name="schoolId" placeholder="学号"/></td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </div>
-            <div class="container" style="border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;">
-                <div class="row">
-                    <div class="col-md-11 col-md-offset-1 col-sm-12 animate">
-                        <div class="promo-section__description">
-                            <h5 class="promo-section__title">团队成员信息</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <form class="col-md-11 col-md-offset-1">
-                        <table style="border-collapse:separate; border-spacing:10px 10px;">
-                            <tr>
-                                <td><input type="text" name="name" placeholder="姓名"/></td>
-                                <td><input type="text" name="gender" placeholder="性别"></td>
-                                <td><input type="text" name="id" placeholder="身份证号"/></td>
-                                <td><input type="text" name="phone" placeholder="联系电话"/></td>
-                                <td><input type="text" name="email" placeholder="邮箱"/></td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="college" placeholder="学校"/></td>
-                                <td><input type="text" name="major" placeholder="院系专业"></td>
-                                <td><input type="text" name="grade" placeholder="年级"/></td>
-                                <td><input type="text" name="schoolId" placeholder="学号"/></td>
-                            </tr>
-                        </table>
-                    </form>
                 </div>
             </div>
         </section> <!-- end promo section -->
@@ -286,11 +291,11 @@
 
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript">
-    var count = 2;
+    var counter = 2;
     $(function () {
         $('#addMember').click(function () {
-            if(count<5) {
-                $('#infoList').append('<div class="container" style="border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;">\n' +
+            if (counter < 5) {
+                $('#memberList').append('<div class="container" style="border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;">\n' +
                     '                <div class="row">\n' +
                     '                    <div class="col-md-11 col-md-offset-1 col-sm-12 animate">\n' +
                     '                        <div class="promo-section__description">\n' +
@@ -319,19 +324,27 @@
                     '                </div>\n' +
                     '                </form>\n' +
                     '            </div>');
-                count++;
+                counter++;
             }
-            else{
+            else {
                 alert("最多只能有五个团队成员！");
             }
         });
+
+    })
+    $(function () {
+        $('#deleteMember').click(function () {
+            $("#memberList>div").last().remove();
+            counter--;
+        });
+
     })
 </script>
 <script type="text/javascript">
     var count = 1;
     $(function () {
         $('#addTeacher').click(function () {
-            if(count<2) {
+            if (count < 2) {
                 $('#teacherContainer').append('<div class="row">\n' +
                     '                    <form class="col-md-11 col-md-offset-1">\n' +
                     '                        <table style="border-collapse:separate; border-spacing:10px 10px;">\n' +
@@ -344,8 +357,16 @@
                     '                </div>');
                 count++;
             }
-            else{
+            else {
                 alert("最多只能有两位指导老师！");
+            }
+        });
+    })
+    $(function () {
+        $('#deleteTeacher').click(function () {
+            if(count>0){
+                $("#teacherContainer>div").last().remove();
+                count--;
             }
         });
     })
