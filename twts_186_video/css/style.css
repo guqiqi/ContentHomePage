@@ -498,12 +498,12 @@ blockquote {
 /* Grid
 /*-------------------------------------------------------*/
 .section-wrap {
-  padding: 130px 0;
+  padding: 100px 30px 0px 30px;
   overflow: hidden;
   background-size: cover;
   background-position: center; }
   .section-wrap--md {
-    padding: 170px 0; }
+    padding: 130px 0; }
   .section-wrap--lg {
     padding: 200px 0; }
 
@@ -4075,7 +4075,8 @@ body.nav--overlay-open {
   .section-wrap {
     padding: 80px 0;
     background-attachment: scroll !important;
-    background-position: 50% 50% !important; } }
+    background-position: 50% 50% !important;
+  } }
 
 @media (max-width: 639px) {
   .col-xxs-12 {
