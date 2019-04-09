@@ -956,7 +956,11 @@ blockquote {
       border: 1px solid white;
   }
     .btn--light span {
-      color: #212121; }
+      color: #ffffff;
+    }
+    .btn--light:hover span {
+      color: #ffc653;
+    }
     .btn--light:hover {
       background-color: #0b5453; }
   .btn--wide {
@@ -1377,6 +1381,7 @@ label {
   .hero__inner {
     display: table-cell;
     vertical-align: middle;
+
   }
   .hero__inner--bottom {
     vertical-align: middle;
