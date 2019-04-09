@@ -1,0 +1,281 @@
+<!doctype html>
+<html class="no-js fixed-layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+        <div class="admin-content">
+                <div class="admin-content-body">
+                    <div class="am-cf am-padding am-padding-bottom-0">
+                        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">团队管理</strong> / <small></small></div>
+                    </div>
+            
+                    <hr>
+            
+                    <div class="am-g">
+                        <div class="am-u-sm-12 am-u-md-6">
+                            <div class="am-btn-toolbar">
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <button type="button" id="checkall"class="am-btn am-btn-default"><span class="icon-check"></span> 全选</button>
+                                    <button type="button" class="am-btn am-btn-default" onclick="delAll()"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <button type="button" class="am-btn am-btn-default">   <a href="vip-add.html"><span class="am-icon-plus"></span> 添加团队</a></button>
+            
+                                </div>
+                            </div>
+                        </div>
+<table class="am-table am-table-striped am-table-hover table-main">
+    <thead>
+
+    </thead><tr>
+    <th><input type="checkbox" name="id[]"/></th>
+    <th>团队名称</th>
+    <th>队长姓名</th>
+    <th>联系电话</th>
+    <th>邮箱</th>
+    <th>队员人数</th>
+    <th>初赛作品</th>
+    <th>复赛作品</th>
+    <th>决赛作品</th>
+    <th class="table-set">团队公告</th>
+</tr> 
+     <tr id="your-alert-1">
+        <td><input id="c1" type="checkbox" name="id[]"/></td>
+        <td id="tname1">trem</td>
+        <td id="tleader1">boss</td>
+        <td id="phone1">13914567891</td>
+        <td id="mail1">18191340500</td>
+        <td id="people1">20</td>
+        <td id="firstwork1"> <button type="button" id="btn2">下载</button></td>
+        <td id="secondwork1"> <button type="button" id="btn2">下载</button></td>
+        <td id="finalwork1"> <button type="button" id="btn2">下载</button></td>
+        <td id="notice1"><p contenteditable="true">这是一条消息</p></td>
+        <td>
+            <div class="am-btn-toolbar">
+                <div class="am-btn-group am-btn-group-xs"> -->
+                    <!-- <a href="vip-list-eye.html" onclick="setthisquestion(0)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-eye"></span>  查看详情</a> -->
+                    <a href="file-add.html" onclick="setthisquestion(0)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-edit"></span>编辑公告</a>
+                  
+                    <!-- <button type="button" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" id="doc-alert-btn-close1" onclick="deletequestion(0)"><span class="am-icon-trash-o"></span>删除</button> -->
+
+                 </div>
+            </div>
+        </td>
+    </tr>
+    <tr id="your-alert-2">
+        <td><input id="c2" type="checkbox" name="id[]"/></td>
+        <td id="tname2">trem</td>
+        <td id="tleader2">boss</td>
+        <td id="phone2">13914567891</td>
+        <td id="mail2">18191340500</td>
+        <td id="people2">20</td>
+        <td id="firstwork2"> <button type="button" id="btn2">下载</button></td>
+        <td id="secondwork2"> <button type="button" id="btn2">下载</button></td>
+        <td id="finalwork2"> <button type="button" id="btn2">下载</button></td>
+        <td id="notice2"><p contenteditable="true">这是一条消息</p></td>
+        <td>
+            <div class="am-btn-toolbar">
+                <div class="am-btn-group am-btn-group-xs"> -->
+                    <!-- <a href="vip-list-eye.html" onclick="setthisquestion(1)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-eye"></span>  查看详情</a> -->
+                  <a href="file-add.html" onclick="setthisquestion(1)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-edit"></span>编辑公告</a> -->
+
+                    <!-- <button type="button" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" id="doc-alert-btn-close2" onclick="deletequestion(1)"><span class="am-icon-trash-o"></span>删除</button> -->
+
+                 </div>
+            </div>
+        </td>
+    </tr>
+    <tr id="your-alert-3">
+        <td><input id="c3" type="checkbox" name="id[]"/></td>
+        <td id="tname3">trem</td>
+        <td id="tleader3">boss</td>
+        <td id="phone3">13914567891</td>
+        <td id="mail3">18191340500</td>
+        <td id="people3">20</td>
+        <td id="firstwork3"> <button type="button" id="btn2">下载</button></td>
+        <td id="secondwork3"> <button type="button" id="btn2">下载</button></td>
+        <td id="finalwork3"> <button type="button" id="btn2">下载</button></td>
+        <td id="notice3"><p contenteditable="true">这是一条消息</p></td>
+        <td>
+            <div class="am-btn-toolbar">
+                <div class="am-btn-group am-btn-group-xs"> -->
+                    <!-- <a href="vip-list-eye.html" onclick="setthisquestion(2)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-eye"></span>  查看详情</a> -->
+                    <a href="file-add.html" onclick="setthisquestion(2)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-edit"></span>编辑公告</a> -->
+
+                    <!-- <button type="button" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" id="doc-alert-btn-close3" onclick="deletequestion(2)"><span class="am-icon-trash-o"></span>删除</button> -->
+
+                 </div>
+            </div>
+        </td>
+    </tr>
+    <tr id="your-alert-4">
+        <td><input id="c4" type="checkbox" name="id[]"/></td>
+        <td id="tname4">trem</td>
+        <td id="tleader4">tom</td>
+        <td id="phone4">13914567891</td>
+        <td id="mail4">18191340500</td>
+        <td id="people4">20</td>
+        <td id="firstwork4"> <button type="button" id="btn2">下载</button></td>
+        <td id="secondwork4"> <button type="button" id="btn2">下载</button></td>
+        <td id="finalwork4"> <button type="button" id="btn2">下载</button></td>
+        <td id="notice4"><p contenteditable="true">这是一条消息</p></td>
+        <td>
+            <div class="am-btn-toolbar">
+                <div class="am-btn-group am-btn-group-xs"> -->
+                    <!-- <a href="vip-list-eye.html" onclick="setthisquestion(3)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-eye"></span>  查看详情</a> -->
+                   <a href="file-add.html" onclick="setthisquestion(3)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-edit"></span>编辑公告</a> -->
+
+                    <!-- <button type="button" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" id="doc-alert-btn-close4" onclick="deletequestion(3)"><span class="am-icon-trash-o"></span>删除</button> -->
+
+                 </div>
+            </div>
+        </td>
+    </tr>
+    <tr id="your-alert-5">
+        <td><input id="c5" type="checkbox" name="id[]"/></td>
+        <td id="tname5">rem</td>
+        <td id="tleader5">boss</td>
+        <td id="phone5">13914567891</td>
+        <td id="mail5">18191340500</td>
+        <td id="people5">20</td>
+        <td id="firstwork5"> <button type="button" id="btn2">下载</button></td>
+        <td id="secondwork5"> <button type="button" id="btn2">下载</button></td>
+        <td id="finalwork5"> <button type="button" id="btn2">下载</button></td>
+        <td id="notice5"><p contenteditable="true">这是一条消息</p></td>
+        <td>
+            <div class="am-btn-toolbar">
+                <div class="am-btn-group am-btn-group-xs"> -->
+                    <!-- <a href="vip-list-eye.html" onclick="setthisquestion(4)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-eye"></span>  查看详情</a> -->
+                    <a href="file-add.html" onclick="setthisquestion(4)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-edit"></span> 编辑公告</a> -->
+
+                    <!-- <button type="button" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" id="doc-alert-btn-close5" onclick="deletequestion(4)"><span class="am-icon-trash-o"></span>删除</button> -->
+
+                 </div>
+            </div>
+        </td>
+    </tr>
+</table> -->
+<div  class="am-cf">
+    <div id="jilu">共 3 条记录</div>
+    <div class="am-fr">
+        <ul class="am-pagination">
+            <li><a id="pageminus" href="#" onclick="changegroup(1)">«</a></li>
+            <li><a id="page1" href="#" onclick="changepage(1)">1</a></li>
+            <li><a id="page2" href="#" onclick="changepage(2)">2</a></li>
+            <li><a id="page3" href="#" onclick="changepage(3)">3</a></li>
+            <li><a id="page4" href="#" onclick="changepage(4)">4</a></li>
+            <li><a id="page5" href="#" onclick="changepage(5)">5</a></li>
+            <li><a id="pageplus" href="#" onclick="changegroup(2)">»</a></li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+</form>
+</div>
+
+</div>
+</div>
+
+<footer class="admin-content-footer">
+<hr>
+<p class="am-padding-left"></p>
+</footer>
+
+</div>
+<!-- content end -->
+</div>
+
+
+
+<footer>
+<hr>
+<p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+</footer>
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+<script>
+    $("#checkall").click(function(){
+        $("input[name='id[]']").each(function(){
+            if (this.checked) {
+                this.checked = false;
+            }
+            else {
+                this.checked = true;
+            }
+        });
+    })
+
+    $(document).on('click','table thead input[type="checkbox"]',function(){
+        if($(this).is(':checked')){
+            $('tbody input[type="checkbox"]').prop('checked',true);
+        }else{
+            $('tbody input[type="checkbox"]').prop('checked',false);
+        }
+    })
+    $(document).on('click','table tbody input[type="checkbox"]',function(){
+        console.log($('table tbody input[type="checkbox"]'))
+        if($('table tbody input[type="checkbox"]').length==$('table tbody input[type="checkbox"]:checked').length){
+            $('thead input[type="checkbox"]').prop('checked',true);
+        }else{
+            $('thead input[type="checkbox"]').prop('checked',false);
+        }
+    })
+    
+        
+    //批量删除
+    function DelSelect(){
+        var Checkbox=false;
+        $("input[name='id[]']").each(function(){
+            if (this.checked==true) {
+                Checkbox=true;
+            }
+        });
+        if (Checkbox){
+            var t=confirm("您确认要删除选中的内容吗？");
+            if (t==false) return false;
+            $("#listform").submit();
+        }
+        else{
+            alert("请选择您要删除的内容!");
+            return false;
+        }
+    }
+    var $eleBtn2 = $("#btn2");
+    $eleBtn2.click(function(){
+            var $eleForm = $("<form method='get'></form>");
+
+            $eleForm.attr("action","https://codeload.github.com/douban/douban-client/legacy.zip/master");
+
+            $(document.body).append($eleForm);
+
+            //提交表单，实现下载
+            $eleForm.submit();
+        });
+      
+</script>
+<script src="assets/js/getUrl.js"></script>
+<script src="./assets/js/vip-list.js"></script>
+<script>
+    var storage = window.localStorage;
+    if(storage["has"]!="yes"){
+        window.location.href="login.html";
+    }
+</script>
+</body>
+</html>

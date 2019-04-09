@@ -1,0 +1,93 @@
+function ready() {
+    var url = base_path+"console/cfg/getBaseLayers/"+configId;
+    $.ajax({
+       url:url,
+       type:"get",
+       dataType:"json",
+       success:function (result) {
+        $("#lot tr").remove();
+
+        var length = result.length;
+        for (var i=0;i<length;i++){
+           var name = result[i].name; //服务名称
+           var alias = result[i].alias;//服务别名
+           var type = result[i].type;//服务类型
+           var year = result[i].year;//年份
+           var url = result[i].url;//服务地址
+           var visible = result[i].visible;//是否可见
+           var id =  result[i].id;//id
+                     serviceIdArray[i] = id;//此处将id塞给serviceIdArray，用于判断是否添加。
+           var str = "";
+           if (visible==true){
+              //生成tr
+              str += '<tr id = "';
+              str += id;
+              str += '"';
+              str += ' class="lot_box"> <td>';
+              str += i+1;
+              str += '</td> <td>';
+              str += name;
+              str += '</td> <td>';
+              str += alias;
+              str += '</td> <td>';
+              str += type;
+              str += '</td> <td>';
+              str += year;
+              str += '</td> <td>';
+              str += url;
+              str += '</td> <td>';
+              str += '<input id="';
+              str += id;
+              str += '"';
+              str += 'type="checkbox" checked="true" onchange="modifyService(this.id);"/>';
+              str += '</td> <td> <input id="';
+              str += id;
+              str += '"';
+              str += 'type="button" value="编辑" onclick="editTd(this.id)"/>';
+              str += '</td> <td>';
+              str += '<button class="rosy" id="';
+              str += id;
+              str += '"';
+              str += ' onclick="deleteService(this.id);">';
+              str += '<img src="static/img/del14.png"></button>';
+              str += '</td> </tr>';
+           }else {
+              //生成tr
+              str += '<tr id = "';
+              str += id;
+              str += '"';
+              str += ' class="lot_box"> <td>';
+              str += i+1;
+              str += '</td> <td>';
+              str += name;
+              str += '</td> <td>';
+              str += alias;
+              str += '</td> <td>';
+              str += type;
+              str += '</td> <td>';
+              str += year;
+              str += '</td> <td>';
+              str += url;
+              str += '</td> <td>';
+              str += '<input id="';
+              str += id;
+              str += '"';
+              str += 'type="checkbox" onchange="modifyService(this.id);"/>';
+              str += '</td> <td> <input id="';
+              str += id;
+              str += '"';
+              str += 'type="button" value="编辑" onclick="editTd(this.id)"/>';
+              str += '</td> <td>';
+              str += '<button class="rosy" id="';
+              str += id;
+              str += '"';
+              str += ' onclick="deleteService(this.id);">';
+              str += '<img src="static/img/del14.png"></button>';
+              str += '</td> </tr>';
+           }
+           var $tr = $(str);
+           $("#lot").append($tr);
+        }
+     }
+  });
+}
