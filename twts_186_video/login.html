@@ -132,13 +132,13 @@
                                     //几个参数需要注意一下
                                     type: "GET",//方法类型
                                     dataType: "json",//预期服务器返回的数据类型
-                                    url: "http://localhost:8082/login/login" ,//url
+                                    url: serverIp+"login/login" ,//url
                                     data: $('#login').serialize(),
                                     success: function (result) {
                                         if (result.result === true) {
                                             var email = document.getElementById("email").value;
                                             localStorage.setItem("email",email);
-                                            window.location = "http://localhost:63342/twts_186_video/team_info.html";
+                                            window.location = browserIp+"team_info.html";
                                         }
                                         else {
                                             alert("用户名密码不匹配");
