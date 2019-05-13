@@ -1,2 +1,2 @@
-var serverIp = 'http://219.219.115.245/';
-var browserIp = 'http://219.219.115.245/';
+var serverIp = 'http://120.79.93.123:8080/';
+var browserIp = 'http://120.79.93.123:5000/';
